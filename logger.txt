@@ -1,0 +1,3 @@
+Error: No hours, time:3:37:59 PM.
+Error: No citydatetime, time:10:27:07 AM.
+Error: No citydatetime, time:10:27:21 AM.

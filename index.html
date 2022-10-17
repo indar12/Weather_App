@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Assignment</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="left">
+            <div class="top">
+                <img class="cloud-img" id="cloud-img" src="./Assets/OneDrive_1_7-24-2022/cloudy-day.png"
+                    alt="image not found">
+                <input type="text" list="cities" value="London" id="city">
+                <datalist id="cities"></datalist>
+            </div>
+            <div class="bottom" id="bottom">
+                <p class="time"><span id="hrs-min">10:10:</span><span id="second"><small>44 </small></span><img
+                        class="am-img" id="am-img" src="./Assets/OneDrive_4_7-24-2022/amState.svg"
+                        alt="image not found"></p>
+                <p class="date" id="date">01-Mar-2020</p>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="temp">
+                <p class="mid-temp">Temp <sup>o</sup>C</p>
+                <h4 class="mid-deg" id="temp-deg">25 C</h4><br>
+                <p class="mid-temp">Temp F</p>
+                <h4 class="mid-deg" id="fahren">78 F</h4>
+            </div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="humi">
+                <p class="mid-para">Humidity</p>
+                <h4 class="mid-per" id="humi-deg">26%</h4><br>
+                <p class="mid-para">Precipitation</p>
+                <h4 class="mid-per" id="precipitation">0%</h4>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-items">
+                <p id="now" class="hrs">NOW</p>
+                <div class="lines"></div><br>
+                <img class="img-cloud" src="./Assets/OneDrive_1_7-24-2022/cloudyIcon.svg" alt="image not found">
+                <p class="para">6</p>
+            </div>
+            <div class="border"></div>
+            <div class="right-items">
+                <p class="hrs">11 AM</p>
+                <div class="lines"></div><br>
+                <img class="img-cloud" src="./Assets/OneDrive_1_7-24-2022/rainyIcon.svg" alt="image not found">
+                <p class="para">7</p>
+            </div>
+            <div class="border"></div>
+            <div class="right-items">
+                <p class="hrs">12 PM</p>
+                <div class="lines"></div><br>
+                <img class="img-cloud" src="./Assets/OneDrive_1_7-24-2022/windyIcon.svg" alt="image not found">
+                <p class="para">7</p>
+            </div>
+            <div class="border"></div>
+            <div class="right-items">
+                <p class="hrs">1 PM</p>
+                <div class="lines"></div><br>
+                <img class="img-cloud" src="./Assets/OneDrive_1_7-24-2022/rainyIcon.svg" alt="image not found">
+                <p class="para">8</p>
+            </div>
+            <div class="border"></div>
+            <div class="right-items">
+                <p class="hrs">2 PM</p>
+                <div class="lines"></div><br>
+                <img class="img-cloud" src="./Assets/OneDrive_1_7-24-2022/windyIcon.svg" alt="image not found">
+                <p class="para">8</p>
+            </div>
+            <div class="border"></div>
+            <div class="right-items">
+                <p class="hrs">3 PM</p>
+                <div class="lines"></div><br>
+                <img class="img-cloud" src="./Assets/OneDrive_1_7-24-2022/rainyIcon.svg" alt="image not found">
+                <p class="para">6</p>
+            </div>
+        </div>
+    </div>
+    <section class="middle-container">
+        <div class="city-const">
+            <p class="middle-title">Top cities around the world</p>
+            <figure class="disp-count">
+                <button id="sunny-btn"><img class="climate-img-selected climate-img climate-img-style" id="sunny"
+                        src="./Assets/OneDrive_1_7-24-2022/sunnyIcon.svg" alt="image not found"></button>
+                <button id="snow-btn"><img class="climate-img climate-img-style" id="snow"
+                        src="./Assets/OneDrive_1_7-24-2022/snowflakeIcon.svg" alt="image not found"></button>
+                <button id="wind-btn"><img class="climate-img climate-img-style" id="wind"
+                        src="./Assets/OneDrive_1_7-24-2022/rainyIcon.svg" alt="image not found"></button>
+            </figure>
+            <label class="spinner-content">Display Top&nbsp</label>
+            <!-- <input class="spinner climate-img" id="spin" value="3" type="number" min="3" max="10"> -->
+            <input class="spinner climate-img" id="spin" value="3" type="number" min="3" max="10">
+        </div>
+        <div id="card-box">
+            <div class="backward-arrow arrow" id="backward-arrow">
+                <img src="./Assets/OneDrive_4_7-24-2022/backwardArrow.svg" width="40px" height="40px">
+            </div>
+            <div class="card-container" id="card-container"></div>
+            <div class="forward-arrow arrow " id="forward-arrow">
+                <img src="./Assets/OneDrive_4_7-24-2022/forwardArrow.svg" width="40px" height="40px">
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <section class="bottom-portion" id="bottom-portion">
+        <div class="bottom-contain">
+            <div class="bottom-title">
+                <p>Cities across continents at a Glance</p>
+            </div>
+            <div class="continent-content">
+                <div id="continent">
+                    <p>Continent Name <img class="arrow-down" id="arrow-continent"
+                            src="./Assets/OneDrive_4_7-24-2022/arrowDown.svg" alt="image not found">
+                </div>
+                &nbsp
+                &nbsp
+                <div id="temperature">Temperature <img class="arrow-up" id="arrow-temperature"
+                        src="./Assets/OneDrive_4_7-24-2022/arrowUp.svg" alt="image not found"></p>
+                </div>
+            </div>
+        </div>
+        <div class="country" id="country">
+            <!-- <div class="country-container" id="country-container">
+                <div class="country-content">
+                    <div class="location">
+                        Asia
+                    </div>
+                    <div class="loc-deg">
+                        38<sup>&deg</sup>C
+                    </div>
+                    <div class="loc-time">
+                        Delhi, 10:10 AM
+                    </div>
+                    <div class="loc-humid">
+                        <img src="Assets/OneDrive_1_7-24-2022/humidityIcon.svg" alt="image not found"> 53%
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        </div>
+    </section>
+
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/weatherdata.js"></script>
+
+</body>
+
+</html>
